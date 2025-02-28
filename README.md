@@ -1,13 +1,13 @@
 # My work commands
 
-## Shell
+## $${\color{red}Shell}$$
 ### Background transfer job
 1. Start transfer using `rsync`
 2. `CTRL + z`
 3. `ps -u hgkang` (PID check)
 4. `disown $PID`
 ##
-## NCO
+## $${\color{red}NCO}$$
 ### Extract variables
 ```shell
 ncks -C -v lonCell,latCell x1_20km_era5_init_2022010100.nc mpas_grid.nc
@@ -18,7 +18,7 @@ ncks -C -v lonCell,latCell x1_20km_era5_init_2022010100.nc mpas_grid.nc
 ncremap -m map.nc in.nc out.nc
 ```
 ##
-## CDO
+## $${\color{red}CDO}$$
 ### Merging GRIB files
 ```shell
 cdo merge in1.grib in2.grib out.grb
@@ -29,7 +29,7 @@ cdo merge in1.grib in2.grib out.grb
 cdo splitday in.grib out
 ```
 ##
-## ESM
+## $${\color{red}ESM}$$
 ### Shorterm archive
 ```shell
 ./case.st_archive --last-date 0101-01-01 --force-move --no-incomplete-logs
