@@ -6,6 +6,24 @@
 2. `CTRL + z`
 3. `ps -u hgkang` (PID check)
 4. `disown $PID`
+
+
+### Parallel (efficient) tar using `pigz`
+#### Compression
+```shell
+tar cf - paths-to-archive | pigz -9 -p 32 > file.tar.gz
+```
+or
+```shell
+tar -cf bigbackup.tar.gz -I pigz /opt
+```
+##### Decompression
+```shell
+tar -I pigz -xf file.tar.gz
+```
+
+
+
 ##
 ## $${\color{red}NCO}$$
 ### Extract variables
@@ -17,6 +35,10 @@ ncks -C -v lonCell,latCell x1_20km_era5_init_2022010100.nc mpas_grid.nc
 ```shell
 ncremap -m map.nc in.nc out.nc
 ```
+
+
+
+
 ##
 ## $${\color{red}CDO}$$
 ### Merging GRIB files
@@ -28,6 +50,10 @@ cdo merge in1.grib in2.grib out.grb
 ```shell
 cdo splitday in.grib out
 ```
+
+
+
+
 ##
 ## $${\color{red}ESM}$$
 ### Shorterm archive
