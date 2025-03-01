@@ -1,6 +1,13 @@
 # My work commands
 
 ## $${\color{red}Shell}$$
+
+### `core` file debugging
+```shell
+gdb executable core
+backtrace
+```
+
 ### Background transfer job
 1. Start transfer using `rsync`
 2. `CTRL + z`
