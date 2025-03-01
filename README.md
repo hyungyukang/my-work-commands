@@ -8,6 +8,11 @@ gdb executable core
 backtrace
 ```
 
+### Create an animated gif
+```shell
+convert -delay 0 -loop 0 *.png anim.gif
+```
+
 ### Background transfer job
 1. Start transfer using `rsync`
 2. `CTRL + z`
