@@ -48,7 +48,10 @@ ncks -C -v lonCell,latCell x1_20km_era5_init_2022010100.nc mpas_grid.nc
 ncremap -m map.nc in.nc out.nc
 ```
 
-
+### Time merge (accumulate files)
+```shell
+ncrcat *.nc out.nc
+```
 
 
 ##
@@ -63,6 +66,10 @@ cdo merge in1.grib in2.grib out.grb
 cdo splitday in.grib out
 ```
 
+### NetCDF file time merge
+```shell
+cdo mergetime in_*.nc out.nc
+```
 
 
 
