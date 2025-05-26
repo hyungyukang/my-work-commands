@@ -33,6 +33,15 @@ tar -cf bigbackup.tar.gz -I pigz /opt
 ```shell
 tar -I pigz -xf file.tar.gz
 ```
+### Split a large file
+#### Split
+```
+split -b 1GB myImage.tar.gz
+```
+#### Merge later
+```
+cat x* > myImage.tar.gz
+```
 
 
 
