@@ -62,6 +62,11 @@ ncremap -m map.nc in.nc out.nc
 ncrcat *.nc out.nc
 ```
 
+### ffmpeg m4a to wav convert (Mono, 16000kHz)
+```shell
+ffmpeg -i ML_discussion_250617.m4a -ac 1 -ar 16000 ML_discussion_250617.wav
+```
+
 
 ##
 ## $${\color{red}CDO}$$
